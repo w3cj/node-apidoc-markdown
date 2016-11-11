@@ -7,7 +7,7 @@ var fs = require('fs'),
 	_ = require('underscore');
 
 var argv = require('optimist')
-	.usage('Generate documentation from apidoc data.\nUsage: apidoc-markdown -p [path] -o [output file]')
+	.usage('Generate documentation from apidoc data.\nUsage: apidoc-markdown2 -p [path] -o [output file]')
 	.demand(['path', 'output'])
 	.alias({
 		'path': 'p',
@@ -56,4 +56,4 @@ var data = {
 
 data.prepend = argv.prepend ? fs.readFileSync(argv.prepend).toString() : null;
 fs.writeFileSync(argv.output, template(data));
-console.log('Wrote apidoc-markdown template output to: ' + argv.output);
+console.log('Wrote apidoc-markdown2 template output to: ' + argv.output);
