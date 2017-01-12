@@ -34,6 +34,20 @@
 | <%- header.field %> | <%- header.type %> | <%- header.optional ? '**optional**' : '' %><%- header.description %>|
 <% }); //forech parameter -%>
 <% } //if parameters -%>
+
+<% if (data[group][sub][0].header && data[group][sub][0].header.examples.length) { -%>
+
+### Header Examples
+
+<% data[group][sub][0].header.examples.forEach(function (example) { -%>
+<%= example.title %>
+
+```
+<%- example.content %>
+```
+<% }); //foreach example -%>
+<% } //if example -%>
+
 <% if (data[group][sub][0].parameter) { -%>
 
 <% Object.keys(data[group][sub][0].parameter.fields).forEach(function(g) { -%>
