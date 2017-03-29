@@ -29,6 +29,17 @@ ejs.filters.mlink = function (obj) {
 	return (obj || '').toLowerCase().replace(/\s/g, '-');
 };
 
+ejs.filters.strip = function (obj) {
+    return (obj || '').replace(/<[^>]*>/g, '');
+};
+
+ejs.filters.padding = function (obj) {
+	var parts = (obj || '').split('.');
+	var padding = new Array(parts.length - 1).fill('&nbsp;&nbsp;&nbsp;').join('');
+
+	return [padding, parts[parts.length - 1]].join('');
+};
+
 var tmplFile = argv.template ? argv.template : __dirname + '/templates/default.md',
 	apiData = JSON.parse(fs.readFileSync(argv.path + '/api_data.json')),
 	projData = JSON.parse(fs.readFileSync(argv.path + '/api_project.json')),
