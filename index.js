@@ -60,9 +60,24 @@ Object.keys(apiByGroup).forEach(function (key) {
 	});
 });
 
+function apiSorter(name) {
+	var idx = projData.order.indexOf(name);
+	if (idx === -1) return Infinity;
+	return idx;
+}
+
+var groupOrder = _.sortBy(Object.keys(apiByGroup), apiSorter);
+
+var nameOrderInGroup = {};
+Object.keys(apiByGroupAndName).forEach(function (group) {
+	nameOrderInGroup[group] = _.sortBy(Object.keys(apiByGroupAndName[group]), apiSorter);
+});
+
 var data = {
 	project: projData,
-	data: apiByGroupAndName
+	data: apiByGroupAndName,
+	groupOrder: groupOrder,
+	nameOrder: nameOrderInGroup
 };
 
 data.prepend = argv.prepend ? fs.readFileSync(argv.prepend).toString() : null;
