@@ -3,9 +3,9 @@
 
 <%= project.description %>
 
-<% Object.keys(data).forEach(function (group) { -%>
+<% groupOrder.forEach(function (group) { -%>
 - [<%= group %>](#<%=: group | mlink %>)
-	<% Object.keys(data[group]).forEach(function (sub) { -%>
+	<% nameOrder[group].forEach(function (sub) { -%>
 - [<%= data[group][sub][0].title %>](#<%=: data[group][sub][0].title | mlink %>)
 	<% }); -%>
 
@@ -14,10 +14,10 @@
 <% if (prepend) { -%>
 <%- prepend %>
 <% } -%>
-<% Object.keys(data).forEach(function (group) { -%>
+<% groupOrder.forEach(function (group) { -%>
 # <%= group %>
 
-<% Object.keys(data[group]).forEach(function (sub) { -%>
+<% nameOrder[group].forEach(function (sub) { -%>
 ## <%= data[group][sub][0].title %>
 [Back to top](#top)
 
