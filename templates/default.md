@@ -35,7 +35,7 @@
 <% }); //forech parameter -%>
 <% } //if parameters -%>
 
-<% if (data[group][sub][0].header && data[group][sub][0].header.examples.length) { -%>
+<% if (data[group][sub][0].header && data[group][sub][0].header.examples && data[group][sub][0].header.examples.length) { -%>
 
 ### Header Examples
 
