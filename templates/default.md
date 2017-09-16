@@ -15,10 +15,10 @@
 <%- prepend %>
 <% } -%>
 <% groupOrder.forEach(function (group) { -%>
-# <%= group %> <a name='<%=: group | mlink %>'></a>
+# <a name='<%=: group | mlink %>'></a> <%= group %>
 
 <% nameOrder[group].forEach(function (sub) { -%>
-## <%= data[group][sub][0].title %> <a name='<%=: data[group][sub][0].title | mlink %>'></a>
+## <a name='<%=: data[group][sub][0].title | mlink %>'></a> <%= data[group][sub][0].title %>
 [Back to top](#top)
 
 <%-: data[group][sub][0].description | undef %>
