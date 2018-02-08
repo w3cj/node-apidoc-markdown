@@ -57,7 +57,7 @@
 | Name     | Type       | Description                           |
 |:---------|:-----------|:--------------------------------------|
 <% data[group][sub][0].parameter.fields[g].forEach(function (param) { -%>
-| <%- param.field %> | <%- param.type %> | <%- param.optional ? '**optional**' : '' %><%- param.description -%>
+| <%- (`&nbsp;&nbsp;&nbsp;&nbsp;`).repeat((param.field.match(/\./g) || []).length) %> <%- param.field %> | <%- param.type %> | <%- param.optional ? '**optional**' : '' %><%- param.description -%>
 <% if (param.defaultValue) { -%>
 _Default value: <%= param.defaultValue %>_<br><% } -%>
 <% if (param.size) { -%>
@@ -98,7 +98,7 @@ _Allowed values: <%- param.allowedValues %>_<% } %>|
 | Name     | Type       | Description                           |
 |:---------|:-----------|:--------------------------------------|
 <% data[group][sub][0].success.fields[g].forEach(function (param) { -%>
-| <%- param.field %> | <%- param.type %> | <%- param.optional ? '**optional**' : '' %><%- param.description -%>
+| <%- (`&nbsp;&nbsp;&nbsp;&nbsp;`).repeat((param.field.match(/\./g) || []).length) %> <%- param.field %> | <%- param.type %> | <%- param.optional ? '**optional**' : '' %><%- param.description -%>
 <% if (param.defaultValue) { -%>
 _Default value: <%- param.defaultValue %>_<br><% } -%>
 <% if (param.size) { -%>
