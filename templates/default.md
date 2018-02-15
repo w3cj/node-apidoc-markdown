@@ -48,7 +48,7 @@
 <% }); //foreach example -%>
 <% } //if example -%>
 
-<% if (data[group][sub][0].parameter) { -%>
+<% if (data[group][sub][0].parameter && data[group][sub][0].parameter.fields) { -%>
 
 <% Object.keys(data[group][sub][0].parameter.fields).forEach(function(g) { -%>
 
