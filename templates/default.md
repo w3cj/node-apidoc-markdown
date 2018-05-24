@@ -79,6 +79,19 @@ _Allowed values: <%- param.allowedValues %>_<% } %>|
 <% }); //foreach example -%>
 <% } //if example -%>
 
+<% if (data[group][sub][0].parameter && data[group][sub][0].parameter.examples && data[group][sub][0].parameter.examples.length) { -%>
+### Param Examples
+
+<% data[group][sub][0].parameter.examples.forEach(function (exampleParam) { -%>
+(<%= exampleParam.type %>)
+<%= exampleParam.title %>
+
+```
+<%- exampleParam.content %>
+```
+<% }); //foreach exampleParam -%>
+<% } //if exampleParam -%>
+
 <% if (data[group][sub][0].success && data[group][sub][0].success.examples && data[group][sub][0].success.examples.length) { -%>
 ### Success Response
 

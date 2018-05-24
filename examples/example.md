@@ -1,3 +1,4 @@
+<a name="top"></a>
 # apidoc-example v0.3.0
 
 apidoc example project
@@ -9,20 +10,24 @@ apidoc example project
 	
 
 
-# User
+# <a name='user'></a> User
 
-## Read data of a User
+## <a name='read-data-of-a-user'></a> Read data of a User
+[Back to top](#top)
 
 Compare Verison 0.3.0 with 0.2.0 and you will see the green markers with new items in version 0.3.0 and red markers with removed items since 0.2.0.
 
 	GET /user/:id
 
-### Parameters
 
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| id			| String			|  The Users-ID.							|
 
+
+
+### Parameter Parameters
+
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+|  id | String | The Users-ID.|
 ### Examples
 
 CURL example:
@@ -32,6 +37,21 @@ CURL example:
         -H 'Content-Type: application/json' \
         -d '{ "id": "4711" }'
 
+```
+
+### Param Examples
+
+(json)
+Param example:
+
+```
+{
+  "group": Paramter,
+  "type": String
+  "filed": id,
+  "optional": false,
+  "description": The Users-ID.
+}
 ```
 
 ### Success Response
@@ -47,6 +67,15 @@ Success-Response (example):
    }
 
 ```
+
+### Success 200
+
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+|  id | String | The Users-ID.|
+|  registered | Date | Registration Date.|
+|  name | Date | Fullname of the User.|
+
 ### Error Response
 
 Error-Response (example):
@@ -58,18 +87,31 @@ Error-Response (example):
    }
 
 ```
-## Create a new User
+## <a name='create-a-new-user'></a> Create a new User
+[Back to top](#top)
 
 In this case "apiErrorStructure" is defined and used.
 Define blocks with params that will be used in several functions, so you dont have to rewrite them.
 
 	POST /user
 
-### Parameters
 
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| name			| String			|  Name of the User.							|
+
+
+
+### Parameter Parameters
+
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+|  name | String | Name of the User.|
+
+
+
+### Success 200
+
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+|  id | String | The new Users-ID.|
 
 ### Error Response
 
@@ -82,17 +124,25 @@ Define blocks with params that will be used in several functions, so you dont ha
    }
 
 ```
-## Change a new User
+## <a name='change-a-new-user'></a> Change a new User
+[Back to top](#top)
 
 This function has same errors like POST /user, but errors not defined again, they were included with "apiErrorStructure"
 
 	PUT /user/:id
 
-### Parameters
 
-| Name    | Type      | Description                          |
-|---------|-----------|--------------------------------------|
-| name			| String			|  Name of the User.							|
+
+
+
+### Parameter Parameters
+
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+|  name | String | Name of the User.|
+
+
+
 
 ### Error Response
 
@@ -105,4 +155,3 @@ This function has same errors like POST /user, but errors not defined again, the
    }
 
 ```
-
