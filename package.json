@@ -28,11 +28,14 @@
     "url": "https://github.com/w3cj/node-apidoc-markdown/issues"
   },
   "dependencies": {
+    "ejs": "^2.6.1",
     "optimist": "~0.6.0",
-    "underscore": "~1.5.2",
-    "ejs": "~0.8.5"
+    "underscore": "~1.5.2"
   },
   "devDependencies": {
+    "eslint": "^5.4.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "release-it": "^7.5.0"
   }
 }

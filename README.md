@@ -1,6 +1,6 @@
 # apidoc-markdown3
 
->NOTE: forked and updated vulnerable dependencies
+>NOTE: forked and updated vulnerable ejs to latest version (filters are no longer supported)
 
 Generate API documentation in markdown from [apidoc](https://github.com/apidoc/apidoc) data.
 
