@@ -33,6 +33,6 @@
     "ejs": "~0.8.5"
   },
   "devDependencies": {
-    "release-it": "0.0.12"
+    "release-it": "^7.5.0"
   }
 }
