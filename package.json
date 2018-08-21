@@ -1,5 +1,5 @@
 {
-  "name": "apidoc-markdown2",
+  "name": "apidoc-markdown3",
   "version": "0.3.7",
   "description": "Generate API documentation in markdown format from apidoc data.",
   "main": "index.js",
@@ -12,20 +12,20 @@
     "example": "examples"
   },
   "bin": {
-    "apidoc-markdown2": "./index.js"
+    "apidoc-markdown3": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/softdevstory/node-apidoc-markdown"
+    "url": "https://github.com/w3cj/node-apidoc-markdown"
   },
   "keywords": [
     "apidoc",
     "markdown"
   ],
-  "author": "developer<developer@softdevstory.net>",
+  "author": "CJ R. <cj@null.computer>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/softdevstory/node-apidoc-markdown/issues"
+    "url": "https://github.com/w3cj/node-apidoc-markdown/issues"
   },
   "dependencies": {
     "optimist": "~0.6.0",

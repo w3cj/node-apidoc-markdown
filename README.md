@@ -1,14 +1,16 @@
-# apidoc-markdown2
+# apidoc-markdown3
+
+>NOTE: forked and updated vulnerable dependencies
 
 Generate API documentation in markdown from [apidoc](https://github.com/apidoc/apidoc) data.
 
 ## Installation
 
-	npm install apidoc-markdown2
+	npm install apidoc-markdown3
 
 ## Usage
 
-	Usage: apidoc-markdown2 -p [path] -o [output file]
+	Usage: apidoc-markdown3 -p [path] -o [output file]
 
 	Options:
 	  --path, -p      Path to generated apidoc output. Where api_data.json & api_project.json resides.  [required]
@@ -20,11 +22,11 @@ Generate API documentation in markdown from [apidoc](https://github.com/apidoc/a
 
 Generate from included example data
 
-	apidoc-markdown2 -p examples -o examples/example.md
+	apidoc-markdown3 -p examples -o examples/example.md
 
 
 [View generated example](https://github.com/softdevstory/node-apidoc-markdown/blob/master/examples/example.md)
 
-# Why apidoc-markdown2
+# Why apidoc-markdown3
 
 apidoc-markdown is not maintained for long time. New tags of apidoc are not supported. This version is applied pull request for supporting new tags.
